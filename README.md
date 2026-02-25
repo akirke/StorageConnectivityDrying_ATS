@@ -6,4 +6,4 @@ Then, ATS was run 3 times, first with constant precipitation inputs to initializ
 
 Data visualization and analysis based on the observation files (water-balance-computational-domain.csv) and visualization files (.xmf files in VisFiles.zip) were peformed in Python, with extractPercentWet.py, HourlyModeledMeasured.py, Fig3Fig4Fig5.py, and exfil_dep_rec.py being used for figures reproduced in the main text, and DepthToWater_snapshot.py used for the creation of a supplemental figure.
 
-Geomorphic analysis of HGFs referenced in the manuscript are based on cross sections extracted from a DEM using an R script, (shambley_xs.R)
+Geomorphic analysis of HGFs referenced in the manuscript are based on cross sections extracted from a DEM using an R script, (shambleyCrossSections.R)
