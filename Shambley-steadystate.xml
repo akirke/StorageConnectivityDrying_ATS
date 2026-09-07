@@ -1,15 +1,15 @@
-<ParameterList name="Main">
+<ParameterList name="Main" type="ParameterList">
   <ParameterList name="mesh" type="ParameterList">
     <ParameterList name="domain" type="ParameterList">
       <Parameter name="mesh type" type="string" value="read mesh file"/>
       <ParameterList name="read mesh file parameters" type="ParameterList">
-        <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+        <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       </ParameterList>
       <Parameter name="build columns from set" type="string" value="surface"/>
     </ParameterList>
     <ParameterList name="surface" type="ParameterList">
       <Parameter name="mesh type" type="string" value="surface"/>
-      <ParameterList name="surface parameters" type="ParameterList">
+      <ParameterList name="surface parameters" type="ParameterList">southInc
         <Parameter name="surface sideset name" type="string" value="surface"/>
       </ParameterList>
     </ParameterList>
@@ -56,546 +56,219 @@
     <ParameterList name="canopy domain boundary" type="ParameterList">
       <Parameter name="region type" type="string" value="boundary"/>
     </ParameterList>
-    <ParameterList name="0" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10022"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="South_Inc" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="200"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="South_Typ" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="205"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="South_Wet" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="210"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="Central_Inc" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="215"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="Central_Wet" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="220"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="Central_Typ" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="225"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="North_Typ1" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="230"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="North_Typ2" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="235"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="North_Wet" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="240"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="South_Flume" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="245"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
-    <ParameterList name="Central_Flume" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="250"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>
     <ParameterList name="bottom" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="surface" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="2"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="external sides" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="3"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="Deciduous Forest" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="41"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="Evergreen Forest" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="42"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="Mixed Forest" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="43"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="Shrub/Scrub" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="52"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="Pasture/Hay" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="81"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="Woody Wetlands" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="90"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="north_Typ2_out" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10000"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="north_Typ2_out cells" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10001"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="north_Wet_out" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10002"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="north_Wet_out cells" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10003"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="north_Typ1_out" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10004"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="north_Typ1_out cells" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10005"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="central_Inc_out" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10006"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="central_Inc_out cells" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10007"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="central_Typ_out" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10008"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="central_Typ_out cells" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10009"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="central_Wet_out" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10010"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="central_Wet_out cells" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10011"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="south_Inc_out" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10012"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="south_Inc_out cells" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10013"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="south_Typ_out" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10014"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="south_Typ_out cells" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10015"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="south_Wet_out" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10016"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="south_Wet_out cells" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10017"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="southFlume_out" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10018"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="label" type="string" value="10000"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="southFlume_out cells" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10019"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="label" type="string" value="10001"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="centralFlume_out" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10020"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="label" type="string" value="10002"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="centralFlume_out cells" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10021"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="label" type="string" value="10003"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="0 surface" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10023"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="label" type="string" value="10005"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="0 boundary" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10024"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="label" type="string" value="10006"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="0 outlet" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10025"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="label" type="string" value="10007"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="surface domain outlet" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10026"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="label" type="string" value="10008"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
     <ParameterList name="river corridor 0 surface" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="10027"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="label" type="string" value="10009"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
-    <ParameterList name="South_Inc surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="201"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="South_Typ surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="206"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="South_Wet surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="211"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="Central_Inc surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="216"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="Central_Wet surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="221"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="Central_Typ surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="226"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="North_Typ1 surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="231"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="North_Typ2 surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="236"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="North_Wet surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="241"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="South_Flume surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="246"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="Central_Flume surface" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="251"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="South_Inc boundary" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="252"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="South_Typ boundary" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="257"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="South_Wet boundary" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="262"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="Central_Inc boundary" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="267"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="Central_Wet boundary" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="272"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
-    <ParameterList name="Central_Typ boundary" type="ParameterList">
-      <Parameter name="region type" type="string" value="labeled set"/>
-      <Parameter name="label" type="string" value="277"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
-      <Parameter name="format" type="string" value="Exodus II"/>
-      <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>
+
     <ParameterList name="GLHYMPS-1791324" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="100"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="bedrock" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="999"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329660" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1000"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329677" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1001"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329678" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1002"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329679" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1003"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329680" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1004"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329685" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1005"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329691" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1006"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="oV2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329700" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1007"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329710" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1008"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
     <ParameterList name="NRCS-329711" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1009"/>
-      <Parameter name="file" type="string" value="output_data/Shambley.exo"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_lessSets.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
   </ParameterList>
+
 
   <ParameterList name="cycle driver">
     <Parameter name="start time" type="double" value="0.0"/>
@@ -750,7 +423,7 @@
       </ParameterList>
       <ParameterList name="surface-precipitation" type="ParameterList">
         <Parameter name="evaluator type" type="string" value="independent variable constant"/>
-        <Parameter name="value" type="double" value="3.61e-8"/>
+        <Parameter name="value" type="double" value="2.706239999999999621352415250623291154141725201043300330638885498046875e-8"/>
       </ParameterList>
       <ParameterList name="capillary_pressure_gas_liq">
         <Parameter name="evaluator type" type="string" value="capillary pressure, atmospheric gas over liquid"/>
@@ -796,7 +469,7 @@
             <Parameter name="component" type="string" value="cell"/>
             <ParameterList name="function" type="ParameterList">
               <Parameter name="function type" type="string" value="constant"/>
-              <Parameter name="value" type="double" value="0.2800000000000000266453525910037569701671600341796875"/>
+              <Parameter name="value" type="double" value="0.22"/>
             </ParameterList>
           </ParameterList>
           <ParameterList name="bedrock" type="ParameterList">
@@ -952,7 +625,7 @@
             <Parameter name="component" type="string" value="cell"/>
             <ParameterList name="function" type="ParameterList">
               <Parameter name="function type" type="string" value="constant"/>
-              <Parameter name="value" type="double" value="1.13e-13"/>
+              <Parameter name="value" type="double" value="1e-13"/>
             </ParameterList>
           </ParameterList>
           <ParameterList name="bedrock" type="ParameterList">
@@ -1298,20 +971,6 @@
   <ParameterList name="checkpoint" type="ParameterList">
     <Parameter name="cycles start period stop" type="Array(int)" value="{0, 100, -1}"/>
   </ParameterList>
-    
-  <ParameterList name="visualization">
-    <ParameterList name="domain" type="ParameterList">
-      <Parameter name="times start period stop" type="Array(double)" value="{0, 3655.0, -1.0}"/>
-      <Parameter name="times start period stop units" type="string" value="d"/>
-      <Parameter name="time units" type="string" value="d"/>
-    </ParameterList>
-    <ParameterList name="surface" type="ParameterList">
-      <Parameter name="times start period stop" type="Array(double)" value="{0, 365.0, -1.0}"/>
-      <Parameter name="times start period stop units" type="string" value="d"/>
-      <Parameter name="time units" type="string" value="d"/>
-      <Parameter name="aliased domains" type="Array(string)" value="{snow, canopy}"/>
-    </ParameterList>
-  </ParameterList>  
 
   <ParameterList name="observations" type="ParameterList">
     <ParameterList name="water_balance_computational_domain" type="ParameterList">
@@ -1319,42 +978,7 @@
       <Parameter name="delimiter" type="string" value=","/>
       <Parameter name="time units" type="string" value="d"/>
       <ParameterList name="observed quantities" type="ParameterList">
-        <ParameterList name="net runoff [mol d^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="external sides"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-        <ParameterList name="runoff only [mol d^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="external sides"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <ParameterList name="modifier" type="ParameterList">
-            <Parameter name="function type" type="string" value="standard math"/>
-            <Parameter name="operator" type="string" value="positive"/>
-            <Parameter name="amplitude" type="double" value="1.0"/>
-            <Parameter name="shift" type="double" value="0.0"/>
-          </ParameterList>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-        <ParameterList name="runon only [mol d^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="external sides"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <ParameterList name="modifier" type="ParameterList">
-            <Parameter name="function type" type="string" value="standard math"/>
-            <Parameter name="operator" type="string" value="negative"/>
-            <Parameter name="amplitude" type="double" value="-1.0"/>
-            <Parameter name="shift" type="double" value="0.0"/>
-          </ParameterList>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
+
         <ParameterList name="river discharge [mol d^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux"/>
           <Parameter name="region" type="string" value="surface domain outlet"/>
@@ -1363,38 +987,6 @@
           <Parameter name="direction normalized flux" type="bool" value="true"/>
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
-        <ParameterList name="south Flume out edges [mol d^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="southFlume_out"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>          
-        <ParameterList name="south Flume out faces [mol d^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="southFlume_out cells"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>          
-        <ParameterList name="central Flume out edges [mol d^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="centralFlume_out"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>          
-        <ParameterList name="central Flume out faces [mol d^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="centralFlume_out cells"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>                    
         <ParameterList name="net groundwater flux [mol d^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="water_flux"/>
           <Parameter name="region" type="string" value="external sides"/>
@@ -1410,27 +1002,25 @@
           <Parameter name="reduction" type="string" value="average"/>
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
-        <ParameterList name="infiltration [mol d^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-surface_subsurface_flux"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="average"/>
+        <ParameterList name="central flume discharge [mol d^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_flux"/>
+          <Parameter name="region" type="string" value="centralFlume_out"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="Central_Flume boundary"/>
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
-        <ParameterList name="surface water content [mol]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_content"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
+        <ParameterList name="south flume discharge [mol d^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_flux"/>
+          <Parameter name="region" type="string" value="southFlume_out"/>
+          <Parameter name="location name" type="string" value="face"/>
           <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="time integrated" type="bool" value="false"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="South_Flume boundary"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
-        <ParameterList name="subsurface water content [mol]" type="ParameterList">
-          <Parameter name="variable" type="string" value="water_content"/>
-          <Parameter name="region" type="string" value="computational domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="time integrated" type="bool" value="false"/>
-        </ParameterList>
+
       </ParameterList>
       <Parameter name="times start period stop" type="Array(double)" value="{0.0, 1.0, -1.0}"/>
       <Parameter name="times start period stop units" type="string" value="d"/>

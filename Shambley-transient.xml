@@ -146,7 +146,7 @@
       <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
-    </ParameterList>      
+    </ParameterList>
     <ParameterList name="surface" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="2"/>
@@ -219,6 +219,7 @@
     </ParameterList>
     <ParameterList name="north_Wet_out" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
+
       <Parameter name="label" type="string" value="10002"/>
       <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
@@ -259,7 +260,6 @@
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
-      
     <ParameterList name="central_Typ_out" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="10008"/>
@@ -512,6 +512,41 @@
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="FACE"/>
     </ParameterList>
+    <ParameterList name="North_Typ1 boundary" type="ParameterList">
+      <Parameter name="region type" type="string" value="labeled set"/>
+      <Parameter name="label" type="string" value="282"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="format" type="string" value="Exodus II"/>
+      <Parameter name="entity" type="string" value="FACE"/>
+    </ParameterList>
+    <ParameterList name="North_Typ2 boundary" type="ParameterList">
+      <Parameter name="region type" type="string" value="labeled set"/>
+      <Parameter name="label" type="string" value="287"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="format" type="string" value="Exodus II"/>
+      <Parameter name="entity" type="string" value="FACE"/>
+    </ParameterList>
+    <ParameterList name="North_Wet boundary" type="ParameterList">
+      <Parameter name="region type" type="string" value="labeled set"/>
+      <Parameter name="label" type="string" value="292"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="format" type="string" value="Exodus II"/>
+      <Parameter name="entity" type="string" value="FACE"/>
+    </ParameterList>
+    <ParameterList name="South_Flume boundary" type="ParameterList">
+      <Parameter name="region type" type="string" value="labeled set"/>
+      <Parameter name="label" type="string" value="297"/>lessSets
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="format" type="string" value="Exodus II"/>
+      <Parameter name="entity" type="string" value="FACE"/>
+    </ParameterList>
+    <ParameterList name="Central_Flume boundary" type="ParameterList">
+      <Parameter name="region type" type="string" value="labeled set"/>
+      <Parameter name="label" type="string" value="302"/>
+      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="format" type="string" value="Exodus II"/>
+      <Parameter name="entity" type="string" value="FACE"/>
+    </ParameterList>
     <ParameterList name="GLHYMPS-1791324" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="100"/>
@@ -571,7 +606,7 @@
     <ParameterList name="NRCS-329691" type="ParameterList">
       <Parameter name="region type" type="string" value="labeled set"/>
       <Parameter name="label" type="string" value="1006"/>
-      <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
+      <Parameter name="file" type="string" value="oV2_ww_ATS/shambley_wwv2_8m.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
     </ParameterList>
@@ -595,15 +630,16 @@
       <Parameter name="file" type="string" value="V2_ww_ATS/shambley_wwv2_8m.exo"/>
       <Parameter name="format" type="string" value="Exodus II"/>
       <Parameter name="entity" type="string" value="CELL"/>
-    </ParameterList>2192
+    </ParameterList>
   </ParameterList>
 
+
   <ParameterList name="cycle driver" type="ParameterList">
-    <Parameter name="start time" type="double" value="274.0"/>
+    <Parameter name="start time" type="double" value="236.0"/>
     <Parameter name="start time units" type="string" value="d"/>
     <Parameter name="end time" type="double" value="1004.0"/>
     <Parameter name="end time units" type="string" value="d"/>
-    <Parameter name="end cycle" type="int" value="100000"/>
+    <Parameter name="end cycle" type="int" value="10000000"/>
     <Parameter name="max time step size [s]" type="double" value="86400.0"/>
     <ParameterList name="required times">
       <Parameter name="times start period stop" type="Array(double)" value="{0.0, 1.0, -1.0}"/>
@@ -650,7 +686,7 @@
       <Parameter name="debug cells" type="Array(int)" value="{0}"/>
       <ParameterList name="initial conditions" type="ParameterList">
 
-        <Parameter name="restart file" type="string" value="8m_warmSpin/checkpoint_final.h5"/>
+        <Parameter name="restart file" type="string" value="8m_warmSpin_ss/checkpoint_final.h5"/>
 
       </ParameterList>
       <ParameterList name="inverse" type="ParameterList">
@@ -702,10 +738,10 @@
 
       <ParameterList name="initial conditions" type="ParameterList">
 
-        <Parameter name="restart file" type="string" value="8m_warmSpin/checkpoint_final.h5"/>
+        <Parameter name="restart file" type="string" value="8m_warmSpin_ss/checkpoint_final.h5"/>
 
       </ParameterList>
-
+        
       <ParameterList name="time integrator" type="ParameterList">
         <Parameter name="extrapolate initial guess" type="bool" value="true"/>
         <Parameter name="solver type" type="string" value="nka_bt_ats"/>
@@ -735,6 +771,7 @@
 
     </ParameterList>
 
+
     <ParameterList name="surface_subsurface_water" type="ParameterList">
       <Parameter name="PK type" type="string" value="coupled water"/>
       <Parameter name="PKs order" type="Array(string)" value="{flow, overland_flow}"/>
@@ -747,7 +784,7 @@
       <ParameterList name="inverse" type="ParameterList">
         <Parameter name="preconditioning method" type="string" value="block ilu"/>
         <Parameter name="iterative method" type="string" value="gmres"/>
-        <ParameterList name="gmres parameters" type="ParameterList">2192
+        <ParameterList name="gmres parameters" type="ParameterList">
           <Parameter name="preconditioning strategy" type="string" value="left"/>
           <Parameter name="error tolerance" type="double" value="0.000001"/>
           <Parameter name="convergence criteria" type="Array(string)" value="{relative residual, make one iteration}"/>
@@ -784,6 +821,7 @@
 
     </ParameterList>
 
+
     <ParameterList name="flow" type="ParameterList">
       <Parameter name="PK type" type="string" value="richards flow"/>
       <Parameter name="primary variable key" type="string" value="pressure"/>
@@ -804,7 +842,7 @@
       <ParameterList name="boundary conditions" type="ParameterList">
         <ParameterList name="seepage face">
           <ParameterList name="subsurface_outflow_region">
-            <Parameter name="regions" type="Array(string)" value="{external sides}"/>
+            <Parameter name="regions" type="Array(string)" value="{surface domain outlet}"/>
             <ParameterList name="boundary condition object">
             <ParameterList name="boundary condition seepage face">
                <Parameter name="external pressure" type="double" value="101325.0"/> <!-- Atmospheric pressure in Pa -->
@@ -816,7 +854,7 @@
 
       <ParameterList name="initial conditions" type="ParameterList">
 
-        <Parameter name="restart file" type="string" value="8m_warmSpin/checkpoint_final.h5"/>
+        <Parameter name="restart file" type="string" value="8m_warmSpin_ss/checkpoint_final.h5"/>
 
       </ParameterList>
 
@@ -852,13 +890,14 @@
 
       <ParameterList name="initial conditions" type="ParameterList">
 
-        <Parameter name="restart file" type="string" value="8m_warmSpin/checkpoint_final.h5"/>
+        <Parameter name="restart file" type="string" value="8m_warmSpin_ss/checkpoint_final.h5"/>
 
       </ParameterList>
 
     </ParameterList>
 
   </ParameterList>
+
 
   <ParameterList name="state" type="ParameterList">
     <ParameterList name="evaluators" type="ParameterList">
@@ -880,7 +919,7 @@
       </ParameterList>
       <ParameterList name="surface-water_table_depth" type="ParameterList">
         <Parameter name="evaluator type" type="string" value="water table depth" />
-      </ParameterList>       
+      </ParameterList> 
       <ParameterList name="snow-water_content" type="ParameterList">
         <Parameter name="evaluator type" type="string" value="multiplicative evaluator"/>
         <Parameter name="dependencies" type="Array(string)" value="{snow-cell_volume, snow-water_equivalent, surface-molar_density_liquid}"/>
@@ -963,7 +1002,7 @@
         <Parameter name="limiter number of dofs" type="int" value="2"/>
         <Parameter name="limiter dof" type="int" value="1"/>
         <Parameter name="air temperature key" type="string" value="surface-air_temperature"/>
-        <Parameter name="surface temperature key" type="string" value="snow-temperature"/>   
+        <Parameter name="surface temperature key" type="string" value="snow-temperature"/>
         <Parameter name="elevation key" type="string" value="surface-elevation"/>
         <Parameter name="net radiation key" type="string" value="snow-radiation_balance"/>
         <Parameter name="limiter key" type="string" value="surface-area_fractions"/>
@@ -1174,62 +1213,6 @@
           </ParameterList>
         </ParameterList>
       </ParameterList>
-<!--        
-      <ParameterList name="surface-relative_humidity" type="ParameterList">
-        <Parameter name="evaluator type" type="string" value="independent variable"/>
-        <ParameterList name="function" type="ParameterList">
-          <ParameterList name="surface domain"> 
-            <Parameter name="region" type="string" value="surface domain"/>
-            <Parameter name="component" type="string" value="cell"/>
-            <ParameterList name="function" type="ParameterList">
-              <Parameter name="function type" type="string" value="tabular"/>
-              <Parameter name="file" type="string" value="shambley_met_hourly.h5"/>
-              <Parameter name="x header" type="string" value="time [s]"/>
-              <Parameter name="y header" type="string" value="relative humidity [-]"/> 
-            </ParameterList>
-          </ParameterList>
-        </ParameterList>
-       </ParameterList>
-
-        
-       <ParameterList name="surface-vapor_pressure_air">
-         <Parameter name="evaluator type" type="string" value="secondary variable from function" />2192
-         <Parameter name="dependencies" type="Array(string)" value="{surface-air_temperature,surface-relative_humidity}" />     
-         <ParameterList name="function">
-           <ParameterList name="drip-1">
-             <Parameter name="region" type="string" value="surface domain" />
-             <Parameter name="component" type="string" value="cell" />
-             <ParameterList name="function">
-               <Parameter name="function type" type="string" value="vapor pressure" />
-             </ParameterList>
-           </ParameterList>
-         </ParameterList>
-       </ParameterList>
-        
-        
-      <ParameterList name="surface-vapor_pressure_air">
-        <Parameter name="evaluator type" type="string" value="secondary variable from function" />
-        <Parameter name="dependencies" type="Array(string)" value="{surface-air_temperature,surface-relative_humidity}" />     
-        <ParameterList name="function">
-          <ParameterList name="drip-1">
-            <Parameter name="region" type="string" value="surface domain" />
-            <Parameter name="component" type="string" value="cell" />
-            <ParameterList name="function">
-              <Parameter name="function type" type="string" value="vapor pressure over liquid" />
-           </ParameterList>
-          </ParameterList>
-        </ParameterList>
-      </ParameterList>
-      <ParameterList name="surface-vapor_pressure_air">
-        <Parameter name="evaluator type" type="string" value="eos" />
-        <Parameter name="EOS basis" type="string" value="pressure" />
-          <Parameter name="variable to temperature key" type="string" value="surface-air_temperature" />
-          <Parameter name="variable to relative humidity key" type="string" value="surface-relative_humidity" />
-          <ParameterList name="EOS parameters">
-            <Parameter name="EOS type" type="string" value="water vapor" />
-          </ParameterList>
-        </ParameterList>
--->
       <ParameterList name="surface-vapor_pressure_air" type="ParameterList">
         <Parameter name="evaluator type" type="string" value="independent variable"/>
         <ParameterList name="function" type="ParameterList">
@@ -1455,7 +1438,7 @@
             <Parameter name="component" type="string" value="cell"/>
             <ParameterList name="function" type="ParameterList">
               <Parameter name="function type" type="string" value="constant"/>
-              <Parameter name="value" type="double" value="1.0e-13"/>
+              <Parameter name="value" type="double" value="1e-13"/>
             </ParameterList>
           </ParameterList>
           <ParameterList name="bedrock" type="ParameterList">
@@ -1870,10 +1853,11 @@
   </ParameterList>
   <ParameterList name="visualization">
     <ParameterList name="domain" type="ParameterList">
-      <Parameter name="times start period stop" type="Array(double)" value="{274.0, 2, -1.0}"/>
+      <Parameter name="times start period stop" type="Array(double)" value="{274.0, 30, -1.0}"/>
       <Parameter name="times start period stop units" type="string" value="d"/>
       <Parameter name="time units" type="string" value="d"/>
     </ParameterList>
+      
     <ParameterList name="surface" type="ParameterList">
       <Parameter name="times start period stop" type="Array(double)" value="{274.0, 2, -1.0}"/>
       <Parameter name="times start period stop units" type="string" value="d"/>
@@ -1881,55 +1865,91 @@
       <Parameter name="aliased domains" type="Array(string)" value="{snow, canopy}"/>
     </ParameterList>
   </ParameterList>
-
+    
   <ParameterList name="checkpoint" type="ParameterList">
     <Parameter name="times start period stop" type="Array(double)" value="{274.0, 365.0, -1.0}"/>
     <Parameter name="times start period stop units" type="string" value="d"/>
   </ParameterList>
 
+
   <ParameterList name="observations" type="ParameterList">
-    <ParameterList name="water_balance_computational_domain" type="ParameterList">
-      <Parameter name="observation output filename" type="string" value="water_balance_computational_domain.csv"/>
+    <!--<ParameterList name="annual_water_balance" type="ParameterList">
+      <Parameter name="observation output filename" type="string" value="annual_water_balance.csv"/>
       <Parameter name="delimiter" type="string" value=","/>
-      <Parameter name="times start period stop" type="Array(double)" value="{732, 1.0, -1.0}" />
+      <Parameter name="times start period stop" type="Array(double)" value="{0, 1.0, -1.0}" />
+      <Parameter name="times start period stop units" type="string" value="y" />     
+      <ParameterList name="observed quantities" type="ParameterList">
+        <ParameterList name="net runoff [mol yr^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_flux"/>
+          <Parameter name="region" type="string" value="external sides"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="river discharge [mol yr^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_flux"/>
+          <Parameter name="region" type="string" value="surface domain outlet"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="net groundwater flux [mol yr^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="external sides"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="surface water content [mol]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_content"/>
+          <Parameter name="region" type="string" value="surface domain"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="location name" type="string" value="cell"/>
+          <Parameter name="time integrated" type="bool" value="false"/>
+        </ParameterList>
+        <ParameterList name="subsurface water content [mol]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_content"/>
+          <Parameter name="region" type="string" value="computational domain"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="location name" type="string" value="cell"/>
+          <Parameter name="time integrated" type="bool" value="false"/>
+        </ParameterList>
+
+        <ParameterList name="rain precipitation [m h^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-precipitation_rain"/>
+          <Parameter name="region" type="string" value="surface domain"/>
+          <Parameter name="location name" type="string" value="cell"/>
+          <Parameter name="reduction" type="string" value="integral"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="total evapotranspiration [mol yr^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-total_evapotranspiration"/>
+          <Parameter name="region" type="string" value="surface domain"/>
+          <Parameter name="location name" type="string" value="cell"/>
+          <Parameter name="reduction" type="string" value="integral"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>  
+      </ParameterList> 
+    </ParameterList>
+          -->
+    <ParameterList name="water_balance_computational_domain" type="ParameterList">
+      <Parameter name="observation output filename" type="string" value="water_balance_formonthly.csv"/>
+      <Parameter name="delimiter" type="string" value=","/>
+      <Parameter name="times start period stop" type="Array(double)" value="{0, 1.0, -1.0}" />
       <Parameter name="times start period stop units" type="string" value="h" />     
       <ParameterList name="observed quantities" type="ParameterList">
-        <ParameterList name="net runoff [mol h^-1]" type="ParameterList">
+          
+        <!--<ParameterList name="net runoff [mol h^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux"/>
           <Parameter name="region" type="string" value="external sides"/>
           <Parameter name="location name" type="string" value="face"/>
           <Parameter name="reduction" type="string" value="extensive integral"/>
           <Parameter name="direction normalized flux" type="bool" value="true"/>
           <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-        <ParameterList name="runoff only [mol h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="external sides"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <ParameterList name="modifier" type="ParameterList">
-            <Parameter name="function type" type="string" value="standard math"/>
-            <Parameter name="operator" type="string" value="positive"/>
-            <Parameter name="amplitude" type="double" value="1.0"/>
-            <Parameter name="shift" type="double" value="0.0"/>
-          </ParameterList>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-        <ParameterList name="runon only [mol h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="external sides"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <ParameterList name="modifier" type="ParameterList">
-            <Parameter name="function type" type="string" value="standard math"/>
-            <Parameter name="operator" type="string" value="negative"/>
-            <Parameter name="amplitude" type="double" value="-1.0"/>
-            <Parameter name="shift" type="double" value="0.0"/>
-          </ParameterList>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
+        </ParameterList> -->
         <ParameterList name="river discharge [mol h^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux"/>
           <Parameter name="region" type="string" value="surface domain outlet"/>
@@ -1938,35 +1958,16 @@
           <Parameter name="direction normalized flux" type="bool" value="true"/>
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
-
-        <ParameterList name="central flume discharge [mol h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="centralFlume_out"/>
+        <ParameterList name="river groundwater out [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="surface domain outlet"/>
           <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>          
           <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="surface domain boundary"/>
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
-
-        <ParameterList name="south flume discharge [mol h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux"/>
-          <Parameter name="region" type="string" value="southFlume_out"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-
-        <ParameterList name="South Incised Reach Outflow [mol/h]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_flux" />
-          <Parameter name="direction normalized flux" type="bool" value="true" />
-          <Parameter name="region" type="string" value="south_Inc_out" />
-          <Parameter name="functional" type="string" value="extensive integral" />
-          <Parameter name="location name" type="string" value="face" />
-          <Parameter name="time integrated" type="bool" value="true" />
-        </ParameterList>
-          
-        <ParameterList name="South Incised Reach groundwater flux [mol h^-1]" type="ParameterList">
+        <ParameterList name="net groundwater flux [mol h^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="water_flux"/>
           <Parameter name="region" type="string" value="external sides"/>
           <Parameter name="location name" type="string" value="face"/>
@@ -1974,25 +1975,114 @@
           <Parameter name="direction normalized flux" type="bool" value="true"/>
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
+        <ParameterList name="rain precipitation [m h^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-precipitation_rain"/>
+          <Parameter name="region" type="string" value="surface domain"/>
+          <Parameter name="location name" type="string" value="cell"/>
+          <Parameter name="reduction" type="string" value="average"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="total evapotranspiration [m h^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-total_evapotranspiration"/>
+          <Parameter name="region" type="string" value="surface domain"/>
+          <Parameter name="location name" type="string" value="cell"/>
+          <Parameter name="reduction" type="string" value="average"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+   
+        <ParameterList name="central flume discharge [mol h^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_flux"/>
+          <Parameter name="region" type="string" value="centralFlume_out"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="Central_Flume boundary"/>        
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="south flume discharge [mol h^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_flux"/>
+          <Parameter name="region" type="string" value="southFlume_out"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="South_Flume boundary"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
 
-          
-        <ParameterList name="South Typical Reach Outflow [mol/h]" type="ParameterList">
+        <ParameterList name="central flume groundwater [mol h^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="Central_Flume boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="centralFlume_out"/>        
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="south flume groundwater [mol h^-1]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="South_Flume boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="southFlume_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+
+        <ParameterList name="South Incised Reach Outflow [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux" />
           <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="direction normalized flux to region" type="string" value="South_Inc boundary"/>
+          <Parameter name="region" type="string" value="south_Inc_out" />
+          <Parameter name="functional" type="string" value="extensive integral" />
+          <Parameter name="location name" type="string" value="face" />
+          <Parameter name="time integrated" type="bool" value="true" />
+        </ParameterList>
+        <ParameterList name="South Typical Reach Outflow [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="surface-water_flux" />
+          <Parameter name="direction normalized flux" type="bool" value="true" />         
+          <Parameter name="direction normalized flux to region" type="string" value="South_Typ boundary"/>
           <Parameter name="region" type="string" value="south_Typ_out" />
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="face" />
           <Parameter name="time integrated" type="bool" value="true" />
         </ParameterList>           
-
         <ParameterList name="South Wet Reach Outflow [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux" />
-          <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="direction normalized flux" type="bool" value="true" />  
+          <Parameter name="direction normalized flux to region" type="string" value="South_Wet boundary"/>
           <Parameter name="region" type="string" value="south_Wet_out" />
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="face" />
           <Parameter name="time integrated" type="bool" value="true" />
-        </ParameterList>       
+        </ParameterList>     
+
+        <ParameterList name="South_Wet Out groundwater flux [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="South_Wet boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>          
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="south_Wet_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="South Incised Out groundwater flux [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="South_Inc boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="south_Inc_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="South Typ Out groundwater flux [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="South_Typ boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>          
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="south_Typ_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
 
         <ParameterList name="South Incised Reach evapotranspiration [m h^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-total_evapotranspiration"/>
@@ -2001,7 +2091,6 @@
           <Parameter name="reduction" type="string" value="average"/>
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
-
         <ParameterList name="South Typical Reach evapotranspiration [m h^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-total_evapotranspiration"/>
           <Parameter name="region" type="string" value="South_Typ surface"/>
@@ -2009,7 +2098,6 @@
           <Parameter name="reduction" type="string" value="average"/>
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
-
         <ParameterList name="South Wet Reach evapotranspiration [m h^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-total_evapotranspiration"/>
           <Parameter name="region" type="string" value="South_Wet surface"/>
@@ -2018,48 +2106,24 @@
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
           
-          
         <ParameterList name="South Incised Reach Depth to Water [m]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_table_depth" />
           <Parameter name="region" type="string" value="South_Inc surface" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList>     
-      
         <ParameterList name="South Typical Reach Depth to Water [m]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_table_depth" />
           <Parameter name="region" type="string" value="South_Typ surface" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>    
-      
+        </ParameterList>      
         <ParameterList name="South Wet Reach Depth to Water [m] " type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_table_depth" />
           <Parameter name="region" type="string" value="South_Wet surface" />
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList> 
-          
-          
-        <ParameterList name="South Incised Reach Saturation" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="South_Inc" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>
-        <ParameterList name="South Typical Reach Saturation" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="South_Typ" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>           
-        <ParameterList name="South Wet Reach Saturation" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="South_Wet" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList> 
-          
 
         <ParameterList name="South Incised Reach Exfiltration [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-surface_subsurface_flux" />
@@ -2068,7 +2132,6 @@
           <Parameter name="location name" type="string" value="cell" />
           <Parameter name="time integrated" type="bool" value="true" />
         </ParameterList> 
-          
         <ParameterList name="South Typical Reach Exfiltration [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-surface_subsurface_flux" />
           <Parameter name="region" type="string" value="South_Typ surface" />
@@ -2083,12 +2146,12 @@
           <Parameter name="location name" type="string" value="cell" />
           <Parameter name="time integrated" type="bool" value="true" />
         </ParameterList>
-
           
                         
         <ParameterList name="Central Incised Reach Outflow [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux" />
           <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="direction normalized flux to region" type="string" value="Central_Inc boundary"/>
           <Parameter name="region" type="string" value="central_Inc_out" />
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="face" />
@@ -2097,6 +2160,7 @@
         <ParameterList name="Central Typical Reach Outflow [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux" />
           <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="direction normalized flux to region" type="string" value="Central_Typ boundary"/>
           <Parameter name="region" type="string" value="central_Typ_out" />
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="face" />
@@ -2105,12 +2169,40 @@
         <ParameterList name="Central Wet Reach Outflow [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux" />
           <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="direction normalized flux to region" type="string" value="Central_Wet boundary"/>
           <Parameter name="region" type="string" value="central_Wet_out" />
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="face" />
           <Parameter name="time integrated" type="bool" value="true" />
         </ParameterList>    
-          
+
+        <ParameterList name="Central Typ Out groundwater flux [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="Central_Typ boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>          
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="central_Typ_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="Central Incised Out groundwater flux [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="Central_Inc boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="central_Inc_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="Central Wet Out groundwater flux [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="Central_Wet boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>          
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="central_Wet_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
 
         <ParameterList name="Central Incised Reach evapotranspiration [m h^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-total_evapotranspiration"/>
@@ -2134,7 +2226,6 @@
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
 
-          
         <ParameterList name="Central Incised Reach Depth to Water [m]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_table_depth" />
           <Parameter name="region" type="string" value="Central_Inc surface" />
@@ -2153,26 +2244,8 @@
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList> 
-
-        <ParameterList name="Central Incised Reach saturation" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="Central_Inc" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>            
-        <ParameterList name="Central Typical Reach Saturation" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="Central_Typ" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>         
-        <ParameterList name="Central Wet Reach Saturation " type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="Central_Wet" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>           
-
+    
+          
         <ParameterList name="Central Incised Reach Exfiltration [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-surface_subsurface_flux" />
           <Parameter name="region" type="string" value="Central_Inc surface" />
@@ -2195,33 +2268,63 @@
           <Parameter name="time integrated" type="bool" value="true" />
         </ParameterList> 
 
+          
         <ParameterList name="North Typical1 Reach Outflow [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux" />
           <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="direction normalized flux to region" type="string" value="North_Typ1 boundary"/>
           <Parameter name="region" type="string" value="north_Typ1_out" />
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="face" />
           <Parameter name="time integrated" type="bool" value="true" />
-        </ParameterList>           
-     
+        </ParameterList>                
         <ParameterList name="North Typical2 Reach Outflow [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux" />
           <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="direction normalized flux to region" type="string" value="North_Typ2 boundary"/>
           <Parameter name="region" type="string" value="north_Typ2_out" />
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="face" />
           <Parameter name="time integrated" type="bool" value="true" />
-        </ParameterList>           
-          
+        </ParameterList>                    
         <ParameterList name="North Wet Reach Outflow [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_flux" />
           <Parameter name="direction normalized flux" type="bool" value="true" />
+          <Parameter name="direction normalized flux to region" type="string" value="North_Wet boundary"/>
           <Parameter name="region" type="string" value="north_Wet_out" />
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="face" />
           <Parameter name="time integrated" type="bool" value="true" />
         </ParameterList>    
 
+        <ParameterList name="North Typical1 Out groundwater flux [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="North_Typ1 boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>          
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="north_Typ1_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="North Typical2 Out groundwater flux [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="North_Typ2 boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="north_Typ2_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+        <ParameterList name="North Wet Out groundwater flux [mol/h]" type="ParameterList">
+          <Parameter name="variable" type="string" value="water_flux"/>
+          <Parameter name="region" type="string" value="North_Wet boundary"/>
+          <Parameter name="location name" type="string" value="face"/>
+          <Parameter name="reduction" type="string" value="extensive integral"/>          
+          <Parameter name="direction normalized flux" type="bool" value="true"/>
+          <Parameter name="direction normalized flux to region" type="string" value="north_Wet_out"/>
+          <Parameter name="time integrated" type="bool" value="true"/>
+        </ParameterList>
+          
         <ParameterList name="North Typical1 Reach evapotranspiration [m h^-1]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-total_evapotranspiration"/>
           <Parameter name="region" type="string" value="North_Typ1 surface"/>
@@ -2244,7 +2347,6 @@
           <Parameter name="time integrated" type="bool" value="true"/>
         </ParameterList>
           
-          
         <ParameterList name="North Typical1 Reach Depth to Water [m]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-water_table_depth" />
           <Parameter name="region" type="string" value="North_Typ1 surface" />
@@ -2263,26 +2365,8 @@
           <Parameter name="functional" type="string" value="average" />
           <Parameter name="location name" type="string" value="cell" />
         </ParameterList> 
-        <ParameterList name="North Typical1 Reach Saturation" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="North_Typ1" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>    
-        <ParameterList name="North Typical2 Reach Saturation" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="North_Typ2" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList>    
-        <ParameterList name="North Wet Reach Saturation" type="ParameterList">
-          <Parameter name="variable" type="string" value="saturation_liquid" />
-          <Parameter name="region" type="string" value="North_Wet" />
-          <Parameter name="functional" type="string" value="average" />
-          <Parameter name="location name" type="string" value="cell" />
-        </ParameterList> 
-          
-         <ParameterList name="North Typical1 Reach Exfiltration [mol/h]" type="ParameterList">
+    
+        <ParameterList name="North Typical1 Reach Exfiltration [mol/h]" type="ParameterList">
           <Parameter name="variable" type="string" value="surface-surface_subsurface_flux" />
           <Parameter name="region" type="string" value="North_Typ1 surface" />
           <Parameter name="functional" type="string" value="extensive integral" />
@@ -2302,103 +2386,8 @@
           <Parameter name="functional" type="string" value="extensive integral" />
           <Parameter name="location name" type="string" value="cell" />
           <Parameter name="time integrated" type="bool" value="true" />
-        </ParameterList>  
+        </ParameterList>
 
-        <ParameterList name="net groundwater flux [mol h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="water_flux"/>
-          <Parameter name="region" type="string" value="external sides"/>
-          <Parameter name="location name" type="string" value="face"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="direction normalized flux" type="bool" value="true"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-          
-        <ParameterList name="rain precipitation [m h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-precipitation_rain"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="average"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-        <ParameterList name="surface evaporation [m h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-evaporation"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="average"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-        <ParameterList name="transpiration [m h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-transpiration"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="average"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-        <ParameterList name="total evapotranspiration [m h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-total_evapotranspiration"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="average"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-          
-        <ParameterList name="infiltration [mol h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-surface_subsurface_flux"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="average"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-          
-        <ParameterList name="canopy evaporation [m h^-1]" type="ParameterList">
-          <Parameter name="variable" type="string" value="canopy-evaporation"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="average"/>
-          <Parameter name="time integrated" type="bool" value="true"/>
-        </ParameterList>
-        <ParameterList name="surface water content [mol]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-water_content"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="time integrated" type="bool" value="false"/>
-        </ParameterList>
-        <ParameterList name="snow water content [mol]" type="ParameterList">
-          <Parameter name="variable" type="string" value="snow-water_content"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="time integrated" type="bool" value="false"/>
-        </ParameterList>
-        <ParameterList name="canopy water content [mol]" type="ParameterList">
-          <Parameter name="variable" type="string" value="canopy-water_content"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="time integrated" type="bool" value="false"/>
-        </ParameterList>
-        <ParameterList name="air temperature [K]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-air_temperature"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="average"/>
-          <Parameter name="time integrated" type="bool" value="false"/>
-        </ParameterList>
-        <ParameterList name="incoming shortwave radiation [W m^-2]" type="ParameterList">
-          <Parameter name="variable" type="string" value="surface-incoming_shortwave_radiation"/>
-          <Parameter name="region" type="string" value="surface domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="average"/>
-          <Parameter name="time integrated" type="bool" value="false"/>
-        </ParameterList>
-        <ParameterList name="subsurface water content [mol]" type="ParameterList">
-          <Parameter name="variable" type="string" value="water_content"/>
-          <Parameter name="region" type="string" value="computational domain"/>
-          <Parameter name="location name" type="string" value="cell"/>
-          <Parameter name="reduction" type="string" value="extensive integral"/>
-          <Parameter name="time integrated" type="bool" value="false"/>
-        </ParameterList>
       </ParameterList>
     </ParameterList>
   </ParameterList>
