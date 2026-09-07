@@ -123,54 +123,45 @@ northTyp1_exfil_mm = (northTyp1_exfil/northTyp1_size)*1000
 northTyp2_exfil_mm = (northTyp2_exfil/northTyp2_size)*1000
 northWet_exfil_mm = (northWet_exfil/northWet_size)*1000
 
-#Calculate Daily Change in Storage (gain/loss) for each reach, then get go from Daily to a median weekly value to reduce autocorrelation
+#Calculate median weekly value for exfiltration to reduce autocorrelation
 southIncised_exfil_daily = pandas.DataFrame(southIncised_exfil_mm)
-southIncised_exfil_daily = southIncised_exfil_daily.resample('D').sum()
 southIncised_exfil_daily = southIncised_exfil_daily.resample('W').median()
 southIncised_exfil_daily = southIncised_exfil_daily.rename(columns={'South Incised Reach Exfiltration [mol/h]':'a'})
 
 southTyp_exfil_daily = pandas.DataFrame(southTyp_exfil_mm)
-southTyp_exfil_daily = southTyp_exfil_daily.resample('D').sum()
 southTyp_exfil_daily = southTyp_exfil_daily.resample('W').median()
 southTyp_exfil_daily = southTyp_exfil_daily.rename(columns={'South Typical Reach Exfiltration [mol/h]':'a'})
 
 southWet_exfil_daily = pandas.DataFrame(southWet_exfil_mm)
-southWet_exfil_daily = southWet_exfil_daily.resample('D').sum()
 southWet_exfil_daily = southWet_exfil_daily.resample('W').median()
 southWet_exfil_daily = southWet_exfil_daily.rename(columns={'South Wet Reach Exfiltration [mol/h]':'a'})
 
 centralIncised_exfil_daily = pandas.DataFrame(centralIncised_exfil_mm)
-centralIncised_exfil_daily = centralIncised_exfil_daily.resample('D').sum()
 centralIncised_exfil_daily = centralIncised_exfil_daily.resample('W').median()
 centralIncised_exfil_daily = centralIncised_exfil_daily.rename(columns={'Central Incised Reach Exfiltration [mol/h]':'a'})
 
 centralIncised2_exfil_daily = pandas.DataFrame(centralIncised2_exfil_mm)
-centralIncised2_exfil_daily = centralIncised2_exfil_daily.resample('D').sum()
 centralIncised2_exfil_daily = centralIncised2_exfil_daily.resample('W').median()
 centralIncised2_exfil_daily = centralIncised2_exfil_daily.rename(columns={'Central Typical Reach Exfiltration [mol/h]':'a'})
 
 centralWet_exfil_daily = pandas.DataFrame(centralWet_exfil_mm)
-centralWet_exfil_daily = centralWet_exfil_daily.resample('D').sum()
 centralWet_exfil_daily = centralWet_exfil_daily.resample('W').median()
 centralWet_exfil_daily = centralWet_exfil_daily.rename(columns={'Central Wet Reach Exfiltration [mol/h]':'a'})
 
 northTyp1_exfil_daily = pandas.DataFrame(northTyp1_exfil_mm)
-northTyp1_exfil_daily = northTyp1_exfil_daily.resample('D').sum()
 northTyp1_exfil_daily = northTyp1_exfil_daily.resample('W').median()
 northTyp1_exfil_daily = northTyp1_exfil_daily.rename(columns={'North Typical1 Reach Exfiltration [mol/h]':'a'})
 
 northTyp2_exfil_daily = pandas.DataFrame(northTyp2_exfil_mm)
-northTyp2_exfil_daily = northTyp2_exfil_daily.resample('D').sum()
 northTyp2_exfil_daily = northTyp2_exfil_daily.resample('W').median()
 northTyp2_exfil_daily = northTyp2_exfil_daily.rename(columns={'North Typical2 Reach Exfiltration [mol/h]':'a'})
 
 northWet_exfil_daily = pandas.DataFrame(northWet_exfil_mm)
-northWet_exfil_daily = northWet_exfil_daily.resample('D').sum()
 northWet_exfil_daily = northWet_exfil_daily.resample('W').median()
 northWet_exfil_daily = northWet_exfil_daily.rename(columns={'North Wet Reach Exfiltration [mol/h]':'a'})
 
 
-#Change from Outflow in m3/hr to average daily m3/hr
+#Change from Outflow in m3/hr to average daily mean m3/hr
 southIncised_out_daily = pandas.DataFrame(southIncised_out)
 southIncised_out_daily = southIncised_out_daily.resample('D').mean()
 southTyp_out_daily = pandas.DataFrame(southTyp_out)
@@ -192,37 +183,36 @@ northTyp2_out_daily = northTyp2_out_daily.resample('D').mean()
 northWet_out_daily = pandas.DataFrame(northWet_out)
 northWet_out_daily = northWet_out_daily.resample('D').mean()
 
-#Calculate streamflow gain per HGF by subtracting outflow minus inflow
-north_Q_wet_daily = northWet_out_daily.iloc[:,0] - northTyp2_out_daily.iloc[:,0]
+north_Q_wet_daily = northWet_out_daily
 north_Q_wet_daily = pandas.DataFrame(north_Q_wet_daily)
 north_Q_wet_daily = north_Q_wet_daily.rename(columns={0:"Q"})
-north_Q_typ2_daily = northTyp2_out_daily.iloc[:,0]
+north_Q_typ2_daily = northTyp2_out_daily
 north_Q_typ2_daily = pandas.DataFrame(north_Q_typ2_daily)
 north_Q_typ2_daily = north_Q_typ2_daily.rename(columns={"North Typical2 Reach Outflow [mol/h]":"Q"})
-north_Q_typ1_daily = northTyp1_out_daily.iloc[:,0] - northWet_out_daily.iloc[:,0]
+north_Q_typ1_daily = northTyp1_out_daily
 north_Q_typ1_daily = pandas.DataFrame(north_Q_typ1_daily)
 north_Q_typ1_daily = north_Q_typ1_daily.rename(columns={0:"Q"})
 
-central_Q_wet_daily = centralWet_out_daily.iloc[:,0] - centralIncised2_out_daily.iloc[:,0]
+central_Q_wet_daily = centralWet_out_daily
 central_Q_wet_daily = pandas.DataFrame(central_Q_wet_daily)
 central_Q_wet_daily = central_Q_wet_daily.rename(columns={0:"Q"})
-central_Q_inc2_daily = centralIncised2_out_daily.iloc[:,0]
+central_Q_inc2_daily = centralIncised2_out_daily
 central_Q_inc2_daily = pandas.DataFrame(central_Q_inc2_daily)
 central_Q_inc2_daily = central_Q_inc2_daily.rename(columns={"Central Typical Reach Outflow [mol/h]":"Q"})
-central_Q_inc_daily = centralIncised_out_daily.iloc[:,0] - centralWet_out_daily.iloc[:,0]
+central_Q_inc_daily = centralIncised_out_daily
 central_Q_inc_daily = pandas.DataFrame(central_Q_inc_daily)
 central_Q_inc_daily = central_Q_inc_daily.rename(columns={0:"Q"})
 
 
-south_Q_inc_daily = southIncised_out_daily.iloc[:,0] - southTyp_out_daily.iloc[:,0]
+south_Q_inc_daily = southIncised_out_daily
 south_Q_inc_daily = pandas.DataFrame(south_Q_inc_daily)
 south_Q_inc_daily = south_Q_inc_daily.rename(columns={0:"Q"})
-south_Q_wet_daily = southWet_out_daily.iloc[:,0]
+south_Q_wet_daily = southWet_out_daily
 south_Q_wet_daily = pandas.DataFrame(south_Q_wet_daily)
 south_Q_wet_daily = south_Q_wet_daily.rename(columns={"South Wet Reach Outflow [mol/h]":"Q"})
-south_Q_typ_daily = southTyp_out_daily.iloc[:,0] - southWet_out_daily.iloc[:,0]
+south_Q_typ_daily = southTyp_out_daily
 south_Q_typ_daily = pandas.DataFrame(south_Q_typ_daily)
-south_Q_typ_daily = south_Q_typ_daily.rename(columns={0:"Q"})
+south_Q_typ_daily = south_Q_typ_daily.rename(columns={"South Typ Reach Outflow [mol/h]":"Q"})
 
 ########### START OF RECESSION MATH ############
 #Calculate daily dQ/dT
@@ -260,7 +250,7 @@ south_wet_decreasing = south_wet_decreasing[south_wet_decreasing['dQ'] < 0]
 south_wet_decreasing = south_wet_decreasing.replace([np.inf, -np.inf], np.nan).dropna(axis=0)
 south_wet_decreasing = south_wet_decreasing[south_wet_decreasing['Q'] > 0.0]
 
-south_typ_decreasing = south_Q_typ_daily[south_Q_typ_daily['ddQ'] < 0]
+south_typ_decreasing = south_Q_typ_daily[south_Q_typ_daily['ddQ'] > 0]
 south_typ_decreasing = south_typ_decreasing[south_typ_decreasing['dQ'] < 0]
 south_typ_decreasing = south_typ_decreasing.replace([np.inf, -np.inf], np.nan).dropna(axis=0)
 south_typ_decreasing = south_typ_decreasing[south_typ_decreasing['Q'] > 0.0]
